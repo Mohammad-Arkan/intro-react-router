@@ -43,7 +43,8 @@ const router =createBrowserRouter([
       },
       {
         path:'friend/:friendId',
-        element: <FriendDetails></FriendDetails>
+        element: <FriendDetails></FriendDetails>,
+        loader:({params}) => console.log(params.friendId)
       },
       {
         path:"/about",
