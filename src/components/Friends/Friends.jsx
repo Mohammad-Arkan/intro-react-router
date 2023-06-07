@@ -3,18 +3,20 @@ import { useLoaderData } from 'react-router-dom';
 import Friend from '../../Friend/Friend';
 
 const Friends = () => {
-const friends = useLoaderData();
-// console.log(friends)
-    
+    const friends = useLoaderData();
+    // console.log(friends)
     return (
         <div>
-            <h4>All my friends: {friends.length}</h4>
-            {
-                friends.map(friend => <Friend
-                key={friend.id}
-                friend={friend}
-                ></Friend>)
-            }
+            <h2>We are all my friendsL: {friends.length}</h2>
+            <div>
+                {
+                    friends.map(friend => <Friend
+                        key={friend.id}
+                        friend={friend}
+                    >
+                    </Friend> )
+                }
+            </div>
         </div>
     );
 };
